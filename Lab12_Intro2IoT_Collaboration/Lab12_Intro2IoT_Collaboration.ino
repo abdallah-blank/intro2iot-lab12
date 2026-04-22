@@ -13,10 +13,8 @@ bool isButtonOn = false;
 
 bool isButtonActivated() {
   bool state = digitalRead(buttonPin);
-  
   Serial.print("Button: ");
   
-
   // TODO: Fix this logic and print the correct status
   // Button is normally HIGH
   if (state == HIGH){
@@ -27,9 +25,8 @@ bool isButtonActivated() {
     return false;
     Serial.println("off.");
   }
-  // HINT: Serial.print should say "ON" or "OFF" too
-
 }
+
 void setup() {
   Serial.begin(9600);
   pinMode(buttonPin, INPUT);  // Use internal pull-up resistor
@@ -61,9 +58,4 @@ bool isRoomDark() {
   // TODO: Fix this logic so it returns true when it's dark
   return false; // <-- incorrect for now
 }
-
-
-// ===============================
-// Manual Switch Control – Student 2
-
 
